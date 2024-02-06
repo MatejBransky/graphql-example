@@ -7,10 +7,7 @@ export const handlers = () => {
   return [
     query(GetAppInfoDocument, () => {
       return HttpResponse.json({
-        data: {
-          foobar:
-            "this should throw the TS error that it doesn't exist in the expected type",
-        },
+        data: {},
       });
     }),
   ];
