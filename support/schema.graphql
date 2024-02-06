@@ -1,0 +1,22 @@
+scalar Instant # DateTime without zone
+scalar Date
+scalar Long
+scalar PositiveInt
+scalar JSON
+
+type Query {
+  info: AppInfo!
+}
+
+type Mutation {
+  noop: Boolean
+}
+
+type AppInfo {
+  state: String
+}
+
+type CommandResponse {
+  success: Boolean!
+  message: String
+}
