@@ -7,7 +7,14 @@ export const handlers = () => {
   return [
     query(GetAppInfoDocument, () => {
       return HttpResponse.json({
-        data: {},
+        // this wasn't needed in the MSW v1
+        __typename: "AppInfo" as const,
+
+        data: {
+          info: {
+            state: "lkj",
+          },
+        },
       });
     }),
   ];
